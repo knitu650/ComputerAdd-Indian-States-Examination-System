@@ -1,0 +1,33 @@
+{
+  "validator": {
+    "$jsonSchema": {
+      "bsonType": "object",
+      "required": [
+        "email",
+        "password",
+        "role"
+      ],
+      "properties": {
+        "email": {
+          "bsonType": "string",
+          "pattern": "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",
+          "description": "must be a valid email"
+        },
+        "password": {
+          "bsonType": "string",
+          "minLength": 8,
+          "description": "must be at least 8 characters"
+        },
+        "role": {
+          "enum": [
+            "student",
+            "admin",
+            "instructor",
+            "super_admin"
+          ],
+          "description": "must be a valid role"
+        }
+      }
+    }
+  }
+}
