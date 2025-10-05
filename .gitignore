@@ -1,0 +1,56 @@
+# Dependencies
+/node_modules
+/bower_components
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+/venv/
+/env/
+pip-log.txt
+pip-delete-this-directory.txt
+.eggs/
+.egg-info/
+dist/
+build/
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*~
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Environment Variables
+.env
+.env.*
+!/.env.example
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build artifacts
+/build
+/dist
+/public
+
+# Test reports
+/coverage
+/reports
+
+# Mobile
+/android/build/
+/ios/build/
+/android/app/build/
+/ios/Pods/
+*.keystore
+*.jks

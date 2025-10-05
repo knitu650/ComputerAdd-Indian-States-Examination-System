@@ -1,0 +1,18 @@
+{
+  "name": "proctoring-service",
+  "version": "1.0.0",
+  "description": "Proctoring Service for real-time exam monitoring.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.1",
+    "webrtc": "^1.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

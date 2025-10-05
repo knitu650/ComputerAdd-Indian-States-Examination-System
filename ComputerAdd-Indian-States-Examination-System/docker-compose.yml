@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  api-gateway:
+    build: ./backend/api-gateway
+    ports:
+      - "8080:8080"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./backend/api-gateway/src:/app/src
+
+  user-service:
+    build: ./backend/microservices/user-service
+    ports:
+      - "8081:8081"
+    environment:
+      - NODE_ENV=development
+      - MONGO_URI=mongodb://mongodb:27017/user-service
+    volumes:
+      - ./backend/microservices/user-service/src:/app/src
+    depends_on:
+      - mongodb
+
+  examination-service:
+    build: ./backend/microservices/examination-service
+    ports:
+      - "8082:8082"
+    environment:
+      - NODE_ENV=development
+      - MONGO_URI=mongodb://mongodb:27017/examination-service
+    volumes:
+      - ./backend/microservices/examination-service/src:/app/src
+    depends_on:
+      - mongodb
+
+  ai-ml-service:
+    build: ./backend/microservices/ai-ml-service
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+    volumes:
+      - ./backend/microservices/ai-ml-service/src:/app/src
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+
+volumes:
+  mongodb-data:

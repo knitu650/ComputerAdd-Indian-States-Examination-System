@@ -1,0 +1,43 @@
+{
+  "bsonType": "object",
+  "required": ["title", "description", "subject", "duration", "createdBy", "scheduledAt"],
+  "properties": {
+    "title": {
+      "bsonType": "string",
+      "description": "must be a string and is required"
+    },
+    "description": {
+      "bsonType": "string",
+      "description": "must be a string and is required"
+    },
+    "subject": {
+      "bsonType": "string",
+      "description": "must be a string and is required"
+    },
+    "duration": {
+      "bsonType": "int",
+      "description": "must be an integer (minutes) and is required"
+    },
+    "questions": {
+      "bsonType": "array",
+      "items": {
+        "bsonType": "objectId"
+      }
+    },
+    "createdBy": {
+      "bsonType": "objectId",
+      "description": "must be an objectId and is required"
+    },
+    "scheduledAt": {
+      "bsonType": "date",
+      "description": "must be a date and is required"
+    },
+    "isActive": {
+      "bsonType": "bool",
+      "description": "must be a boolean"
+    },
+    "createdAt": {
+      "bsonType": "date"
+    }
+  }
+}
