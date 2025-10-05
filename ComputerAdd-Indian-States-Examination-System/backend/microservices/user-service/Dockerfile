@@ -1,24 +1,21 @@
-# Use an official Node.js runtime as a parent image
-FROM node:14-alpine
+FROM node:18-alpine
 
-# Set the working directory in the container
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Copy package.json and package-lock.json to the working directory
+# Install dependencies
 COPY package*.json ./
+RUN npm ci --only=production
 
-# Install any needed packages
-RUN npm install
-
-# Bundle app source
+# Copy source code
 COPY . .
 
-# Make port 3001 available to the world outside this container
+# Create logs directory
+RUN mkdir -p logs
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=40s --retries=3 \
+  CMD node -e "require('http').get('http://localhost:3001/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
+
 EXPOSE 3001
 
-# Define environment variable
-ENV NODE_ENV production
-ENV PORT 3001
-
-# Run app.js when the container launches
 CMD ["node", "src/app.js"]

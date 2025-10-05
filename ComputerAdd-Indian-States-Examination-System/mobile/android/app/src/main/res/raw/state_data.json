@@ -1,0 +1,25 @@
+{
+  "states": [
+    {
+      "name": "Andhra Pradesh",
+      "capital": "Amaravati",
+      "population": 49386799,
+      "area": 160205,
+      "language": "Telugu"
+    },
+    {
+      "name": "Karnataka",
+      "capital": "Bengaluru",
+      "population": 61095297,
+      "area": 191791,
+      "language": "Kannada"
+    },
+    {
+      "name": "Tamil Nadu",
+      "capital": "Chennai",
+      "population": 72138958,
+      "area": 130060,
+      "language": "Tamil"
+    }
+  ]
+}

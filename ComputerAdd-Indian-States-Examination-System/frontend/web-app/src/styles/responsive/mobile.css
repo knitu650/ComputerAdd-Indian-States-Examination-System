@@ -1,0 +1,26 @@
+
+@media (max-width: 640px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+  
+  .grid-responsive {
+    grid-template-columns: 1fr;
+  }
+  
+  .hide-mobile {
+    display: none !important;
+  }
+  
+  .full-mobile {
+    width: 100% !important;
+  }
+  
+  .stack-mobile {
+    flex-direction: column !important;
+  }
+}

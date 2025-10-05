@@ -1,0 +1,58 @@
+# Hyperparameters Configuration
+
+computer_vision:
+  learning_rate: 0.001
+  batch_size: 32
+  epochs: 50
+  optimizer: adam
+  weight_decay: 0.0001
+  
+  augmentation:
+    rotation_range: 20
+    width_shift_range: 0.2
+    height_shift_range: 0.2
+    horizontal_flip: true
+    zoom_range: 0.2
+
+natural_language_processing:
+  learning_rate: 0.0001
+  batch_size: 16
+  epochs: 10
+  optimizer: adamw
+  warmup_steps: 500
+  weight_decay: 0.01
+  
+  max_sequence_length: 512
+  gradient_accumulation_steps: 4
+
+machine_learning:
+  adaptive_testing:
+    min_questions: 10
+    max_questions: 30
+    precision_threshold: 0.3
+    ability_range: [-3, 3]
+  
+  recommendation:
+    num_recommendations: 5
+    similarity_threshold: 0.6
+    cold_start_strategy: popular
+  
+  anomaly_detection:
+    contamination: 0.1
+    n_estimators: 100
+    max_samples: 256
+
+callbacks:
+  early_stopping:
+    patience: 5
+    restore_best_weights: true
+    monitor: val_loss
+  
+  reduce_lr:
+    patience: 3
+    factor: 0.5
+    min_lr: 0.000001
+  
+  model_checkpoint:
+    save_best_only: true
+    monitor: val_accuracy

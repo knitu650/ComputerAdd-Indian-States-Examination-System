@@ -1,0 +1,22 @@
+platform :ios, '13.0'
+use_frameworks!
+
+target 'ComputerAddExam' do
+  # Networking
+  pod 'Alamofire', '~> 5.8'
+  
+  # Image loading
+  pod 'SDWebImage', '~> 5.18'
+  
+  # JSON parsing
+  pod 'SwiftyJSON', '~> 5.0'
+  
+  # Database
+  pod 'RealmSwift', '~> 10.42'
+  
+  # Biometric
+  pod 'LocalAuthentication'
+  
+  # Camera
+  pod 'AVFoundation'
+end

@@ -1,0 +1,17 @@
+{
+  "name": "proctoring-service",
+  "version": "1.0.0",
+  "description": "Proctoring microservice for exam monitoring",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.6.2",
+    "axios": "^1.5.0",
+    "wrtc": "^0.4.7",
+    "dotenv": "^16.3.1"
+  }
+}
