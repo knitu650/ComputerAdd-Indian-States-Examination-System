@@ -1,0 +1,13 @@
+{
+  "startExam": "Start Exam",
+  "submitExam": "Submit Exam",
+  "timeRemaining": "Time Remaining",
+  "questionNumber": "Question",
+  "markForReview": "Mark for Review",
+  "clearAnswer": "Clear Answer",
+  "instructions": "Instructions",
+  "totalQuestions": "Total Questions",
+  "totalMarks": "Total Marks",
+  "duration": "Duration",
+  "passingMarks": "Passing Marks"
+}
