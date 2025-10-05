@@ -1,0 +1,69 @@
+# Computer Vision Models Configuration
+
+face_detection:
+  model_type: cnn
+  input_shape: [224, 224, 3]
+  architecture:
+    - conv2d: {filters: 32, kernel: 3, activation: relu}
+    - maxpool: {pool_size: 2}
+    - conv2d: {filters: 64, kernel: 3, activation: relu}
+    - maxpool: {pool_size: 2}
+    - conv2d: {filters: 128, kernel: 3, activation: relu}
+    - maxpool: {pool_size: 2}
+    - flatten: {}
+    - dense: {units: 512, activation: relu}
+    - dropout: {rate: 0.5}
+    - dense: {units: 1, activation: sigmoid}
+  
+  training:
+    optimizer: adam
+    learning_rate: 0.001
+    loss: binary_crossentropy
+    metrics: [accuracy]
+    batch_size: 32
+    epochs: 50
+
+face_recognition:
+  model_type: resnet50
+  input_shape: [224, 224, 3]
+  num_classes: 1000
+  pretrained: imagenet
+  
+  fine_tuning:
+    freeze_layers: 140
+    trainable_layers: 10
+  
+  training:
+    optimizer: adam
+    learning_rate: 0.0001
+    loss: categorical_crossentropy
+    metrics: [accuracy, top_5_accuracy]
+    batch_size: 16
+    epochs: 100
+
+object_detection:
+  model_type: yolo_v5
+  input_shape: [640, 640, 3]
+  classes:
+    - cell_phone
+    - book
+    - calculator
+    - laptop
+    - tablet
+  
+  confidence_threshold: 0.5
+  nms_threshold: 0.4
+  
+  training:
+    optimizer: sgd
+    learning_rate: 0.01
+    momentum: 0.9
+    weight_decay: 0.0005
+    batch_size: 16
+    epochs: 300
+
+pose_estimation:
+  model_type: mediapipe
+  min_detection_confidence: 0.5
+  min_tracking_confidence: 0.5
+  model_complexity: 1
