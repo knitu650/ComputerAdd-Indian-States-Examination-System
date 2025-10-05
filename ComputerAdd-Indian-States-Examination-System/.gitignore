@@ -1,59 +1,304 @@
 # Dependencies
-/node_modules
-/bower_components
-
-# Build files
-/build
-/dist
-/out
-
-# Log files
-*.log
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# IDE files
-.idea
-.vscode
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 # Python
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+*$py.class
+*.so
 .Python
-/pip-wheel-metadata/
-/build/
-/develop-eggs/
-/dist/
-/downloads/
-/eggs/
-/.eggs/
-/lib/
-/lib64/
-/parts/
-/sdist/
-/var/
-/wheels/
-/share/python-wheels/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
 *.egg-info/
 .installed.cfg
 *.egg
 MANIFEST
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+.venv/
+venv/
+ENV/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
 
-# Other
+# Environment
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 .DS_Store
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# Testing
+/coverage
+*.lcov
+.nyc_output
+test-results/
+junit.xml
+coverage/
+.pytest_cache/
+
+# Production Build
+build/
+dist/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.turbo/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+data/
+dumps/
+backups/
+
+# AI/ML
+*.h5
+*.pkl
+*.pth
+*.onnx
+*.pb
+*.tflite
+trained_models/
+checkpoints/
+experiments/
+wandb/
+mlruns/
+.mlflow/
+datasets/raw/
+datasets/processed/
+
+# Mobile
+# Android
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.ap_
+*.aab
+output.json
+
+# iOS
+*.mode1v3
+*.mode2v3
+*.moved-aside
+*.pbxuser
+*.perspectivev3
+**/*sync/
+.sconsign.dblite
+.tags*
+**/.vagrant/
+**/DerivedData/
+Icon?
+**/Pods/
+**/.symlinks/
+profile
+xcuserdata
+**/.generated/
+Flutter/App.framework
+Flutter/Flutter.framework
+Flutter/Flutter.podspec
+Flutter/Generated.xcconfig
+Flutter/ephemeral/
+Flutter/app.flx
+Flutter/app.zip
+Flutter/flutter_assets/
+Flutter/flutter_export_environment.sh
+ServiceDefinitions.json
+Runner/GeneratedPluginRegistrant.*
+*.xcworkspace
+
+# React Native
+.expo/
+.expo-shared/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+*.ipa
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+.docker/
+
+# Kubernetes
+*.secret.yaml
+secrets/
+*.key
+*.crt
+*.pem
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# Ansible
+*.retry
+.vault_pass
+
+# Certificates & Keys
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+.certificates/
+
+# Sensitive Data
+secrets/
+private/
+credentials/
+*.credentials
+*secret*
+*password*
+*token*
+
+# Backup Files
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*~
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Media Files (Large)
+*.mp4
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.mkv
+
+# Archives
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Documentation Build
+docs/_build/
+docs/.doctrees/
+site/
+
+# Monitoring
+prometheus_data/
+grafana_data/
+elasticsearch_data/
+kibana_data/
+
+# Temp Files
+tmp/
+temp/
+*.tmp
+.temp/
+
+# Cache
+.cache/
+.npm/
+.eslintcache
+.stylelintcache
+*.cache
+
+# Lock Files
+package-lock.json
+yarn.lock
+Gemfile.lock
+Cargo.lock
+
+# CI/CD
+.github/workflows/secrets.yml
+
+# Custom
+uploads/
+downloads/
+public/uploads/
+exam-recordings/
+proctoring-videos/
+user-data/
+analytics-data/
